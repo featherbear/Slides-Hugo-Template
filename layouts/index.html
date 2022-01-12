@@ -35,9 +35,14 @@
       </div>
       <div class="items columns is-desktop is-centered is-multiline is-vcentered">
         {{ range sort .Site.RegularPages.ByDate }}
-        {{ if ne .Params.hidden true }}
+          {{ if ne .Params.hidden true }}
+            {{ if isset .Params "redirect" }}
+              {{ .Scratch.Set "address" .Params.redirect }}
+            {{ else }}
+              {{ .Scratch.Set "address" .RelPermalink }}
+            {{ end }}
         <div data-title="{{.Title}}" class="item column is-one-quarter">
-          <a href="{{ .RelPermalink }}">
+          <a href="{{ .Scratch.Get "address" }}">
             <p class="notification is-info" 
               {{ if (isset .Params "tilecolour" ) }}
                 style="background-color: {{ .Params.tilecolour | safeCSS }}"
@@ -53,7 +58,7 @@
             {{.Title}}
           </div> -->
         </div>
-        {{ end }}
+          {{ end }}
         {{ end }}
       </div>
 
