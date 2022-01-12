@@ -9,6 +9,17 @@ This post will be created as a _draft_
 
 When the post is finalised, remove the `draft: true` property from the front matter
 
+## Colours
+
+If the post exists within a directory, it will be colourised.  
+The colour can be overrided in the front matter
+
+## Front matter
+
+* `hidden` - `true` / `false` - Whether to hide the presentation from the main page
+* `redirect` - URL to redirect the presentation to
+* `tileColour` - `#HEXCODE` / `colour` - Tile colour
+
 # Previewing your posts
 
 To preview the public view, run `hugo server`  
