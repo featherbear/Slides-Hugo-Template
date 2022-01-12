@@ -8,9 +8,7 @@ Hugo Slides Template
 * [Create a repository based off the template](https://github.com/featherbear/Slides-Hugo-Template/generate)
 * Clone your new repository
 * Navigate into the repository directory
-* Clone the reveal-hugo theme
-  * `git submodule add git@github.com:dzello/reveal-hugo.git themes/reveal-hugo`
-  * GitHub templates don't replicate the git module structures
+* Install submodules (`git submodule update --init`)
 * Modify the `config.toml` file to your liking
 * $$$
 
