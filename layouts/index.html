@@ -42,7 +42,7 @@
               {{ .Scratch.Set "address" .RelPermalink }}
             {{ end }}
         <div data-title="{{.Title}}" class="item column is-one-quarter">
-          <a href="{{ $scratch.Get 'address' }}">
+          <a href="{{ .Scratch.Get "address" }}">
             <p class="notification is-info" 
               {{ if (isset .Params "tilecolour" ) }}
                 style="background-color: {{ .Params.tilecolour | safeCSS }}"
