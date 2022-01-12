@@ -35,6 +35,7 @@
       </div>
       <div class="items columns is-desktop is-centered is-multiline is-vcentered">
         {{ range sort .Site.RegularPages.ByDate }}
+        {{ if ne .Params.hidden true }}
         <div data-title="{{.Title}}" class="item column is-one-quarter">
           <a href="{{ .RelPermalink }}">
             <p class="notification is-info" 
@@ -52,6 +53,7 @@
             {{.Title}}
           </div> -->
         </div>
+        {{ end }}
         {{ end }}
       </div>
 
